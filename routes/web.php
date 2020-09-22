@@ -13,10 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->middleware('auth');
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth');
+
+Route::get('logout', [App\Http\Controllers\HomeController::class, 'logout'])->middleware('auth');
+
+Route::view('rate', 'rateForm')->middleware('auth');
+
+Route::post('rate', [App\Http\Controllers\SetRateController::class, 'store']);
+

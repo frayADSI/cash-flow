@@ -12,4 +12,8 @@ class Rate extends Model
     public function transactions() {
         return $this->hasMany(Transaction::class);
     }
+
+    public function setValueAttribute($value) {
+        $this->attributes['value'] = floatval($value);
+    }
 }

@@ -15,9 +15,9 @@ class CreateCompaniesTable extends Migration
     {
         Schema::create('companies', function (Blueprint $table) {
             $table->string('rif')->primary();
-            $table->string('name');
-            $table->string('phone')->nullable();
-            $table->string('address')->nullable();
+            $table->string('name',45);
+            $table->string('phone',20)->nullable();
+            $table->string('address',45)->nullable();
             $table->timestamps();
         });
     }

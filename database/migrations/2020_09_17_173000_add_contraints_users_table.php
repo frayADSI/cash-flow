@@ -14,7 +14,7 @@ class AddContraintsUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('company_rif');
+            $table->string('company_rif',20);
             $table->unsignedBigInteger('rol_id');
             $table->foreign('rol_id')->references('id')->on('rols');
             $table->foreign('company_rif')->references('rif')->on('companies');

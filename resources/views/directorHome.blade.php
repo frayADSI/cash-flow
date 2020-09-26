@@ -20,7 +20,7 @@
         </section>
         <section class="row two-btn-container">
             <div class="col-5 d-flex justify-content-center">
-                <a href="" class="custom-short-btn p-3">Crear usuario</a>
+                <a href="create-user" class="custom-short-btn p-3">Crear usuario</a>
             </div>
             <div class="col-6 d-flex justify-content-center">
                 <a href="rate" class="custom-short-btn p-3">Cargar tasa</a>

@@ -22,5 +22,9 @@ Route::get('logout', [App\Http\Controllers\HomeController::class, 'logout'])->mi
 
 Route::view('rate', 'rateForm')->middleware('auth');
 
-Route::post('rate', [App\Http\Controllers\SetRateController::class, 'store']);
+Route::post('rate', [App\Http\Controllers\SetRateController::class, 'store'])->middleware('auth');
+
+Route::get('create-user',[App\Http\Controllers\UserController::class, 'create'])->middleware('auth');
+
+Route::post('create-user', [App\Http\Controllers\UserController::class, 'store'])->middleware('auth');
 

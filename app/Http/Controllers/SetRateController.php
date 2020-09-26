@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Rate;
 use Illuminate\Http\Request;
+use App\Http\Requests\SetRateRequest;
 
 class SetRateController extends Controller
 {
@@ -33,7 +34,7 @@ class SetRateController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(SetRateRequest $request)
     {
         $rate = new Rate;
 

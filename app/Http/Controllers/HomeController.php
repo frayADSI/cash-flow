@@ -32,6 +32,16 @@ class HomeController extends Controller
                 'currentUser' => $user,
                 'rol' => $currentRol
             ]);
+        } else if(strtoupper($currentRol) == "CAJERO PRINCIPAL") {
+            return view('mainCashierHome', [
+                'currentUser' => $user,
+                'rol' => $currentRol
+            ]);
+        } else if(strtoupper($currentRol) == "SUPERVISOR DE TIENDA") {
+            return view('supervisorHome', [
+                'currentUser' => $user,
+                'rol' => $currentRol
+            ]);
         }
     }
 

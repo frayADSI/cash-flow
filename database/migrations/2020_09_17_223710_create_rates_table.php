@@ -17,7 +17,7 @@ class CreateRatesTable extends Migration
             $table->id();
             $table->double('value');
             $table->timestamps();
-            $table->dateTimeTz('date',0);
+            $table->date('date',0);
         });
     }
 

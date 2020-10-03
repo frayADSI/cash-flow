@@ -28,3 +28,6 @@ Route::get('create-user',[App\Http\Controllers\UserController::class, 'create'])
 
 Route::post('create-user', [App\Http\Controllers\UserController::class, 'store'])->middleware('auth');
 
+Route::get('inputTransaction', [App\Http\Controllers\InputTransactionController::class, 'create']);
+
+Route::post('inputTransaction', [App\Http\Controllers\InputTransactionController::class, 'store']);

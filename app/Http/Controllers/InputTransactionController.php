@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Rate;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Transaction;
+use App\Http\Requests\InputTransactionRequest;
 
 class InputTransactionController extends Controller
 {
@@ -41,7 +42,7 @@ class InputTransactionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(InputTransactionRequest $request)
     {
 
         $currentUser = Auth::user();

@@ -31,3 +31,7 @@ Route::post('create-user', [App\Http\Controllers\UserController::class, 'store']
 Route::get('inputTransaction', [App\Http\Controllers\InputTransactionController::class, 'create']);
 
 Route::post('inputTransaction', [App\Http\Controllers\InputTransactionController::class, 'store']);
+
+Route::get('outputTransaction', [App\Http\Controllers\OutputTransactionController::class, 'create']);
+
+Route::post('outputTransaction', [App\Http\Controllers\OutputTransactionController::class, 'store']);

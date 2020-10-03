@@ -62,7 +62,7 @@
             </div>
             <div class="row">
                 <div class="col-6">
-                    <input type="text" id="rate" class="form-control" name="amount"/>
+                    <input type="text" id="rate" class="form-control" name="amount" value="{{old('amount')}}"/>
                 </div>
                 <div class="col-6">
                      <select  id="rate" class="form-control" name="rate_id">

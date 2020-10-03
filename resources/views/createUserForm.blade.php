@@ -32,7 +32,7 @@
                     <label for=name" class="mb-0">Nombre</label>
                 </div>
                 <div class="col-6">
-                     <input type="text" id="name" class="form-control" name="name"/>
+                     <input type="text" id="name" class="form-control" name="name" value="{{old('name')}}"/>
                 </div>
             </div>
 
@@ -41,7 +41,7 @@
                     <label for="lastName" class="mb-0">Apellido</label>
                 </div>
                 <div class="col-6">
-                     <input type="text" id="lastName" class="form-control" name="last_name"/>
+                     <input type="text" id="lastName" class="form-control" name="last_name" value="{{old('last_name')}}"/>
                 </div>
             </div>
 
@@ -50,7 +50,7 @@
                     <label for="id" class="mb-0">Cédula</label>
                 </div>
                 <div class="col-4">
-                     <input type="text" id="id" class="form-control" name="id"/>
+                     <input type="text" id="id" class="form-control" name="id" value="{{old('id')}}"/>
                 </div>
             </div>
 
@@ -59,7 +59,7 @@
                     <label for="id" class="mb-0">Email</label>
                 </div>
                 <div class="col-4">
-                     <input type="email" id="id" class="form-control" name="email"/>
+                     <input type="email" id="id" class="form-control" name="email" value="{{old('email')}}"/>
                 </div>
             </div>
 

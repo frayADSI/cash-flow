@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('/v1/login', [App\Http\Controllers\api\APIController::class, 'login']);
+
+Route::get('/v1/getTransactions',[App\Http\Controllers\api\APIController::class, 'getTransactions']);
+

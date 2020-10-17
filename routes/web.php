@@ -13,10 +13,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->middleware('auth');
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth');
+
+Route::get('logout', [App\Http\Controllers\HomeController::class, 'logout'])->middleware('auth');
+
+Route::view('rate', 'rateForm')->middleware('auth');
+
+Route::post('rate', [App\Http\Controllers\SetRateController::class, 'store'])->middleware('auth');
+
+Route::get('create-user',[App\Http\Controllers\UserController::class, 'create'])->middleware('auth');
+
+Route::post('create-user', [App\Http\Controllers\UserController::class, 'store'])->middleware('auth');
+
+Route::get('inputTransaction', [App\Http\Controllers\InputTransactionController::class, 'create']);
+
+Route::post('inputTransaction', [App\Http\Controllers\InputTransactionController::class, 'store']);
+
+Route::get('outputTransaction', [App\Http\Controllers\OutputTransactionController::class, 'create']);
+
+Route::post('outputTransaction', [App\Http\Controllers\OutputTransactionController::class, 'store']);

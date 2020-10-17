@@ -16,7 +16,7 @@ class AddForeignTransactionsTable extends Migration
         Schema::table('transactions', function (Blueprint $table) {
             $table->unsignedBigInteger('rate_id');
             $table->integer('user_ci');
-            $table->foreign('user_ci')->references('ci')->on('users');
+            $table->foreign('user_ci')->references('id')->on('users');
             $table->foreign('rate_id')->references('id')->on('rates');
         });
     }
